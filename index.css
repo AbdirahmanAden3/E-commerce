@@ -19,11 +19,11 @@
 } */
 
 
-/* .navbar{
-    position: fixed;
-    background: #051922;
-
-} */
+.nav-item:hover{
+     padding: 5px;
+    background: #52849b;
+    color:#ffffff;
+}
 .col{
     text-align: center;
     margin: 3px;
@@ -87,7 +87,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-
     margin-top: 2rem;
     
    
@@ -140,12 +139,125 @@
 }
 
 
+
+
+
+#marquee {
+    margin: 0;
+    padding: 0;
+    background: #F5F5F5;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#marquee {
+    padding: 50px 0px;
+    width: 100%;
+}
+
+#marquee .container {
+    overflow: hidden;
+    width: 100%;
+}
+
+#marquee .pic-container {
+    display: flex;
+    animation: marquee 10s infinite linear;
+}
+
+/* #marquee:hover {
+    animation-play-state: paused;
+} */
+
+#marquee .pic-container .pic {
+    flex-basis: 20%;
+    flex-shrink: 0;
+}
+
+#marquee img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(238, 231, 231, 0.9);
+}
+
+@media (max-width: 1024px) {
+    #marquee .pic-container .pic {
+        flex-basis: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    #marquee .pic-container .pic {
+        flex-basis: 33.33%;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 1024px) {
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-125%);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-186.65%);
+        }
+    }
+}
+
+
 @media  (max-width: 768px) {
     .section-a img {
         width: 100%;
         display: none;
 
 
+    }
+    
+}
+
+.a ul{
+    list-style: none;
+}
+
+.a ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer{
+    /* margin: -47; */
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        width: 100%;
+        flex-basis: 50%;
+        background-color: red   ;
     }
     
 }
