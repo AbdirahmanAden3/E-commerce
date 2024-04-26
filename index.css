@@ -6,10 +6,10 @@
 
 
 :root{
-    background: var(#F5F5F5);
-    background: var(#051922);
-    color: var(#F28123);
-    background: #000;
+    --background: var(#F5F5F5);
+    --background: var(#051922);
+    --color: var(#F28123);
+    --background: #000;
 }
 
 /* body{
