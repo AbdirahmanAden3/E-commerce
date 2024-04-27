@@ -1,0 +1,55 @@
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<style>
+  .item {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+  <div id="items">
+    <div class="item">
+      <span>Item 1 - $1</span>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <span>Item 2 - $2</span>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <span>Item 3 - $3</span>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+  </div>
+  <hr>
+  <h2>Cart</h2>
+  <div id="cart">
+    Your cart is empty.
+  </div>
+
+  <script>
+    let cartTotal = 0;
+
+    function addToCart(price) {
+      cartTotal += price;
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartElement = document.getElementById("cart");
+      if (cartTotal === 0) {
+        cartElement.innerHTML = "Your cart is empty.";
+      } else {
+        cartElement.innerHTML = "Total: $" + cartTotal;
+      }
+    }
+  </script>
+</body>
+</html>
