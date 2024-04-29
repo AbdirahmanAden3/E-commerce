@@ -1,55 +1,30 @@
-html
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopping Cart</title>
-<style>
-  .item {
-    margin-bottom: 10px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Increase</title>
 </head>
 <body>
-  <h1>Shopping Cart</h1>
-  <div id="items">
-    <div class="item">
-      <span>Item 1 - $1</span>
-      <button onclick="addToCart(2)">Add to Cart</button>
-    </div>
-    <div class="item">
-      <span>Item 2 - $2</span>
-      <button onclick="addToCart(2)">Add to Cart</button>
-    </div>
-    <div class="item">
-      <span>Item 3 - $3</span>
-      <button onclick="addToCart(2)">Add to Cart</button>
-    </div>
-  </div>
-  <hr>
-  <h2>Cart</h2>
-  <div id="cart">
-    Your cart is empty.
-  </div>
+  <h1>Total: <span id="total">0</span></h1>
+  <button id="increaseBtn">Increase Total</button>
 
   <script>
-    let cartTotal = 0;
+    // Get references to the button and total span
+    const increaseBtn = document.getElementById('increaseBtn');
+    const totalSpan = document.getElementById('total');
 
-    function addToCart(price) {
-      cartTotal += price;
-      updateCart();
+    // Initialize total value
+    let total = 0;
+
+    // Function to update the total and display
+    function updateTotal() {
+      total++;
+      totalSpan.textContent = total;
     }
 
-    function updateCart() {
-      const cartElement = document.getElementById("cart");
-      if (cartTotal === 0) {
-        cartElement.innerHTML = "Your cart is empty.";
-      } else {
-        cartElement.innerHTML = "Total: $" + cartTotal;
-      }
-    }
+    // Add event listener to the button
+    increaseBtn.addEventListener('click', updateTotal);
   </script>
 </body>
 </html>

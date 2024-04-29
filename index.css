@@ -18,12 +18,22 @@
     background-position: center;
 } */
 
-
-.nav-item:hover{
-     padding: 5px;
-    background: #52849b;
-    color:#ffffff;
+.bl{
+    color: red  !important;
+    background-color: nevy;
 }
+
+.a{
+    color: blue ;
+}
+
+nav-item{
+    color: red;
+}
+
+
+
+
 .col{
     text-align: center;
     margin: 3px;
@@ -49,14 +59,7 @@
     font-size: 18px;
   
 }
- .img {
-       width: 100%;
-       height: 100vh;
-       background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,1)),url(./hero-bg.jpg);
-       background-size: cover;
-       background-position: center;
-       
-    }
+
 
 
 /* .nav-item{
