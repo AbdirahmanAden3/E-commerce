@@ -1,43 +1,33 @@
- let card = document.querySelector("#cards");
+let card = document.querySelector("#cards");
 
 const product = [
+  {
+    id: 1,
+    name: "stroweber",
+    price: 2,
+    img: "product-img-1.jpg",
+    description: "iican",
+  },
+  {
+    id: 2,
+    name: "lemon",
+    price: 1,
+    img: "product-img-3.jpg",
+    description: "waa n",
+  },
+  {
+    id: 3,
+    name: "juice",
+    price: 2,
+    img: "product-img-6.jpg",
+    description: "waa tufafiican",
+  },
+];
 
-    {
-        id: 1,
-        name: "stroweber",
-        price: 2,
-        img:  "product-img-1.jpg",
-        description:  "iican"
-
-    },
-    {  
-        id: 2,
-        name: "lemon",
-        price: 1,
-        img :  "product-img-3.jpg",
-        description:  "waa n"
-    },
-    {  
-        id: 3,
-        name: "juice",
-        price: 2,
-        img:  "product-img-6.jpg",
-        description:  "waa tufafiican"
-
-    }
-
-]
-
-
-
-
-
-let htm = ''
-
+let htm = "";
 
 product.map((item) => {
-    console.log(item) 
-    htm += `
+  htm += `
 
     <div class="col-md-3" >
     <div class="card ">
@@ -67,44 +57,49 @@ product.map((item) => {
     </div>
   </div>
 
-    `
+    `;
+});
 
-})
-
-card.innerHTML = htm
+card.innerHTML = htm;
 card.addEventListener("click", (e) => {
-  if(e.target.classList.contains("btn") === true){ 
-    let id = e.target.parentElement.children[0].innerText 
+  if (e.target.classList.contains("btn")) {
+    let id = e.target.parentElement.children[0].innerText;
     let fil = product.filter(function (product) {
-        if (product.id == id) {
-          return "as";
-        }
+      return product.id == id;
+    });
 
+    let localstorage = JSON.parse(localStorage.getItem("product")) || [];
+
+    if (localstorage.length === 0) {
+      let productItem = {
+        id: fil[0].id,
+        name: fil[0].name,
+        price: fil[0].price,
+        img: fil[0].img,
+        description: fil[0].description,
+        quantity: 1,
+      };
+      localStorage.setItem("product", JSON.stringify([productItem]));
+      window.location = "/cart.html";
+    } else {
+      let filLo = localstorage.filter(function (product) {
+        return product.id == id;
       });
-
-      let localstorage = localStorage.getItem("product");
-
-
-
-
-      let filter = localstorage.filter(function (product) {
-        if (product.id == fil[0].id) {
-          return "as";
-        }
-
-      });
-      console.log(filter)
-    
-
-
-    
+      if (filLo.length === 0) {
+        let productItem = {
+          id: fil[0].id,
+          name: fil[0].name,
+          price: fil[0].price,
+          img: fil[0].img,
+          description: fil[0].description,
+          quantity: 1,
+        };
+        localstorage.push(productItem); // Update the localstorage array
+        localStorage.setItem("product", JSON.stringify(localstorage)); // Update local storage with the updated array
+        window.location = "/cart.html";
+      } else {
+        window.location = "/cart.html";
+      }
+    }
   }
-
-    
-    
-})
-
-
-
-
-
+});
