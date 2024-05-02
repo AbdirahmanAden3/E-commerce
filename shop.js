@@ -3,21 +3,21 @@ let card = document.querySelector("#cards");
 const product = [
   {
     id: 111,
-    name: "stroweber",
+    name: "watch",
     price: 2,
     img: "watch.jpg",
     description: "waa ku iibso qiimo yare",
   },
   {
     id: 11,
-    name: "lemon",
+    name: "pc",
     price: 1,
     img: "pcL.jpg",
     description: "cun",
   },
   {
     id: 11,
-    name: "juice",
+    name: "shirt",
     price: 2,
     img: "watch.jpg",
     description: "waa tufafiican",
