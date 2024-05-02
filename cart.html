@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/59e02c8d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 </head>
 <style>
   table td .s img{
@@ -33,9 +34,9 @@
 </style>
 <body>
         
-                <nav class="navbar navbar-expand-lg bg-warning">
+                <nav class="navbar navbar-expand-lg "  style="background: #1e1c66;;"  >
                   <div class="container">
-                    <a class="navbar-brand" href="#"> <img src="./img/logo.png"  width="100px" height="40px"  alt=""> </a>
+                    <a class="navbar-brand" href="#"> <img src=""  width="100px" height="40px"  alt=""> </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -46,9 +47,6 @@
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="About.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="./pages.html">pages</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="./news.html">News</a>
@@ -79,11 +77,12 @@
            </div>
      
            <!-- End list -->
-            <div class="container mt-5 d-flex justify-content-around">
-              <div class="row">
+            <div class="container mt-5 d-flex justify-content-around" >
+              
+              <div class="row col-md-6-col-lg-3-col-md-6-col-sm-12">
                 
-                <table>
-                <div class="col-md-7 col-lg-3 col-md-6 col-sm-12 ">
+                <table style="width: 100%;" >
+                
                 <thead>
                 <tr style="background: #f5f5f5;" >
                   <th style="padding: 28px;" >Product </th>
@@ -99,22 +98,23 @@
                 </tbody>
               </table>
                <div class="col-md-4 text-center " style= >
-              <button  onclick="AddCart()" class="btn btn-lg btn-warning text-white text-center border-2px mt-3 ">update Cart</button>
+              <button  onclick="AddCart()" class="btn btn-lg btn-primary text-white text-center border-2px mt-3 ">update Cart</button>
               </div>
               </div>
-              
-                        <div class="col-md-3 col-lg-3 col-md-6 col-sm-12">
-                        <table >
+                     
+                 <div class="col-md-6-col-lg-3-col-md-6-col-sm-12">
+                        <table>
                           <thead>
-                          <tr class="text-center" style="background: #f5f5f5; " >
-                            <th style="padding: 15px;" >Total</th>
+                          <tr class=" text-center" style="background: #f5f5f5;">
+                            
+                            <th style="padding: 15px;">Total</th>
                             <th>price</th>
                           </tr>
                           </thead>
                           <tbody >
-                            <div class="row">
+                            <div class="row " >
                           <tr>
-                             <div class="col-md-6 col-lg-3 col-md-6 col-sm-12 ">
+                             <div class="col-md-6-col-lg-3-col-md-6-col-sm-12 ">
                             <td id="subtotal" > <strong  >Subtotal</strong> </td>
                             </div>
                             <div class="col-md-6">
@@ -124,29 +124,24 @@
                           </tr>
                           <div class="row">
                             <tr>
-                               <div class="col-md-6 col-lg-3 col-md-6 col-sm-12col-lg-3 col-md-6 col-sm-12 ">
-                              <td><strong>Shipping</strong></td>
+                               <div class="col-md-6 col-lg-3 col-md-6 col-sm-12 col-lg-3 col-md-6 col-sm-12 ">
                               </div>
-                              <div class="col-md-6 col-lg-3 col-md-6 col-sm-12 ">
-                              <td>$1</td>
-                              </div>
-  
                             </tr>
                             <div class="row">
                               <tr>
                                  <div class="col-md-6 col-lg-3 col-md-6 col-sm-12 ">
-                                <td id="total"  ><strong>Total</strong></td>
+                                <td id="total" ><strong>Total</strong></td>
                                 </div>
                                 <div class="col-md-6 col-lg-3 col-md-6 col-sm-12 ">
-                                <td><h6 id="total">$1</h6></td>
+                                <td><h6 id=""  ></h6></td>
                                 </div>
                               </tr>
                           </div>
                           </tbody>
                         </table>
                          <div class="btn"  style="margin-left: 3px; border: none; " >
-                         <button   class="btn btn-lg btn-warning text-white border-2px mt-3 ">update Cart</button>
-                        <button class="btn btn-lg btn-warning text-white border-2px mt-3 ">Checkout</button>
+                         <button   class="btn btn-lg btn-primary text-white border-2px mt-3 ">update Cart</button>
+                        <button class="btn btn-lg btn-primary text-white border-2px mt-3 ">Checkout</button>
                         </div>
                         </div>
                         </div>
@@ -163,7 +158,7 @@
                <!-- End -->
 
              
-       <div class="footer mt-5  text-white" style="background: #051922; padding:80px">
+       <div class="footer mt-5  text-white" style="background: #1e1c66; padding: 80px;">
         <div class="row">
           <div class="col-md-3 col-lg-3 col-md-6 col-sm-12 ">
 
@@ -219,9 +214,9 @@
          
           
        <script src="card.js"></script> 
+       <script src="shop.js" ></script>
          <script src="main.js"></script>
               
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>                                                                                                                                                                                                                                                                                                              
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.esm.min.js"></script>                                                                                                                                                                                                                                                                                
 </body>
 </html>

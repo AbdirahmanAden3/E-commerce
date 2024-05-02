@@ -2,24 +2,24 @@ let card = document.querySelector("#cards");
 
 const product = [
   {
-    id: 1,
+    id: 111,
     name: "stroweber",
     price: 2,
-    img: "product-img-1.jpg",
+    img: "watch.jpg",
     description: "waa ku iibso qiimo yare",
   },
   {
-    id: 2,
+    id: 11,
     name: "lemon",
     price: 1,
-    img: "product-img-3.jpg",
+    img: "pcL.jpg",
     description: "cun",
   },
   {
-    id: 3,
+    id: 11,
     name: "juice",
     price: 2,
-    img: "product-img-6.jpg",
+    img: "watch.jpg",
     description: "waa tufafiican",
   },
 ];
@@ -67,6 +67,7 @@ card.addEventListener("click", (e) => {
     let fil = product.filter(function (product) {
       return product.id == id;
     });
+    
 
     let localstorage = JSON.parse(localStorage.getItem("product")) || [];
 

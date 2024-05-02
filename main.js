@@ -68,40 +68,9 @@ function displayCart() {
 
 
 
+alert("welcome to our website")
 
 
 
 
-
-
-// <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//   <meta charset="UTF-8">
-//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//   <title>Total Increase</title>
-// </head>
-// <body>
-//   <h1>Total: <span id="total">0</span></h1>
-//   <button id="increaseBtn">Increase Total</button>
-
-//   <script>
-//     // Get references to the button and total span
-//     const increaseBtn = document.getElementById('increaseBtn');
-//     const totalSpan = document.getElementById('total');
-
-//     // Initialize total value
-//     let total = 0;
-
-//     // Function to update the total and display
-//     function updateTotal() {
-//       total++;
-//       totalSpan.textContent = total;
-//     }
-
-//     // Add event listener to the button
-//     increaseBtn.addEventListener('click', updateTotal);
-//   </script>
-// </body>
-// </html>
 
