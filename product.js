@@ -6,14 +6,14 @@ const product = [
     name: "stroweber",
     price: 2,
     img: "product-img-1.jpg",
-    description: "waa ku iibso qiimo yare",
+    description: "iican",
   },
   {
     id: 2,
     name: "lemon",
     price: 1,
     img: "product-img-3.jpg",
-    description: "cun",
+    description: "waa n",
   },
   {
     id: 3,
@@ -29,37 +29,36 @@ let htm = "";
 product.map((item) => {
   htm += `
 
-    <div class="col-md-3" >
-    <div class="card ">
-       
-        <img src="./img/${item.img}" alt="">
-        <div class="card-body w-300 ">
-          <h2 class="card-1 text-center h-30px">${item.name}</h2>
-          <p class="card-text text-center">${item.description}</p>
-          <h3 class="text-center">$${item.price}</h3>
+  <div class="col-md-3" >
+  <div class="card ">
+     
+      <img src="./img/${item.img}" alt="">
+      <div class="card-body w-300 ">
+        <h2 class="card-1 text-center h-30px">${item.name}</h2>
+        <p class="card-text text-center">${item.description}</p>
+        <h3 class="text-center">$${item.price}</h3>
 
-          <div class="star text-center" style="color: #1e1c66;" >
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-sta"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-            <div class="btn">
-             <div class="d-none">${item.id}</div>
-              <button type="button"  class="btn btn-primary text-white " style= "background-color: #1e1c66;;" >
-               
-                Add Cart<i class="fa-solid fa-cart-shopping"  ></i>    
-                
-              </button>
-            </div>
+        <div class="star text-center" style="color: #1e1c66;" >
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-sta"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
         </div>
-    </div>
+          <div class="btn">
+           <div class="d-none">${item.id}</div>
+            <button type="button"  class="btn btn-primary text-white " style= "background-color: #1e1c66;;" >
+             
+              Add Cart<i class="fa-solid fa-cart-shopping"  ></i>    
+              
+            </button>
+          </div>
+      </div>
   </div>
+</div>
 
-    `;
+  `;
 });
-
 card.innerHTML = htm;
 card.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn")) {
@@ -95,7 +94,6 @@ card.addEventListener("click", (e) => {
           quantity: 1,
         };
         localstorage.push(productItem); // Update the localstorage array
-        localstorage.pop();
         localStorage.setItem("product", JSON.stringify(localstorage)); // Update local storage with the updated array
         window.location = "/cart.html";
       } else {
